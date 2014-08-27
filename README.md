@@ -7,10 +7,16 @@ Introduction
 The MPSearchesManager allow developers to easily implement instant search with a UITableView & UISearchBar, with an NSMutableArray as the data source.
 
 
-Setup
------
+Pertinent Files
+---------------
 
-Add the following code in your .h or .m files
+_MPSearchesManager.h_ & _MPSearchesManager.m_ are the two files in the demo that you should import into your own Xcode Workspace. These files help you manage the searches internally.
+
+
+Code Setup
+----------
+
+Add the following code in the .h or .m files that correspond to the view controller for which you would like to implement instant search.
 
 *Interface (.h file)*
 
