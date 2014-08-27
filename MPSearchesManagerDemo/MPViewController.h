@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MPSearchesManager.h"
 
-@interface MPViewController : UIViewController
+@interface MPViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (strong, nonatomic) MPSearchesManager *searchesManager;
+@property (strong, nonatomic) NSMutableArray *dataArray;
+
 
 @end

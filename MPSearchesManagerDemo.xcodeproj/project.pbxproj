@@ -21,6 +21,7 @@
 		EB31237519AD3A9F005E9327 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB31235719AD3A9F005E9327 /* UIKit.framework */; };
 		EB31237D19AD3A9F005E9327 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB31237B19AD3A9F005E9327 /* InfoPlist.strings */; };
 		EB31237F19AD3A9F005E9327 /* MPSearchesManagerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB31237E19AD3A9F005E9327 /* MPSearchesManagerDemoTests.m */; };
+		EB31238A19AD80CE005E9327 /* MPSearchesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB31238919AD80CE005E9327 /* MPSearchesManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		EB31237A19AD3A9F005E9327 /* MPSearchesManagerDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MPSearchesManagerDemoTests-Info.plist"; sourceTree = "<group>"; };
 		EB31237C19AD3A9F005E9327 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EB31237E19AD3A9F005E9327 /* MPSearchesManagerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPSearchesManagerDemoTests.m; sourceTree = "<group>"; };
+		EB31238819AD80CE005E9327 /* MPSearchesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSearchesManager.h; sourceTree = "<group>"; };
+		EB31238919AD80CE005E9327 /* MPSearchesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSearchesManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +115,11 @@
 		EB31235919AD3A9F005E9327 /* MPSearchesManagerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				EB31236219AD3A9F005E9327 /* MPAppDelegate.h */,
-				EB31236319AD3A9F005E9327 /* MPAppDelegate.m */,
-				EB31236519AD3A9F005E9327 /* Main.storyboard */,
 				EB31236819AD3A9F005E9327 /* MPViewController.h */,
 				EB31236919AD3A9F005E9327 /* MPViewController.m */,
+				EB31238C19ADB8F1005E9327 /* Search Manager Logic */,
+				EB31238B19ADB8D4005E9327 /* Irrelevant Files */,
+				EB31236519AD3A9F005E9327 /* Main.storyboard */,
 				EB31236B19AD3A9F005E9327 /* Images.xcassets */,
 				EB31235A19AD3A9F005E9327 /* Supporting Files */,
 			);
@@ -150,6 +153,24 @@
 				EB31237B19AD3A9F005E9327 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB31238B19ADB8D4005E9327 /* Irrelevant Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB31236219AD3A9F005E9327 /* MPAppDelegate.h */,
+				EB31236319AD3A9F005E9327 /* MPAppDelegate.m */,
+			);
+			name = "Irrelevant Files";
+			sourceTree = "<group>";
+		};
+		EB31238C19ADB8F1005E9327 /* Search Manager Logic */ = {
+			isa = PBXGroup;
+			children = (
+				EB31238819AD80CE005E9327 /* MPSearchesManager.h */,
+				EB31238919AD80CE005E9327 /* MPSearchesManager.m */,
+			);
+			name = "Search Manager Logic";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB31238A19AD80CE005E9327 /* MPSearchesManager.m in Sources */,
 				EB31236019AD3A9F005E9327 /* main.m in Sources */,
 				EB31236A19AD3A9F005E9327 /* MPViewController.m in Sources */,
 				EB31236419AD3A9F005E9327 /* MPAppDelegate.m in Sources */,

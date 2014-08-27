@@ -14,16 +14,58 @@
 
 @implementation MPViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    /* Sample data */
+    self.dataArray = [[NSMutableArray alloc] initWithArray:@[@"Idina", @"Nina", @"Grace", @"Addison", @"Ed", @"Madison", @"Tara", @"Josephine"]];
+    
+    self.searchesManager = [[MPSearchesManager alloc] initWithTableView:self.tableView andAllValuesArray:self.dataArray andKeyPath:@""];
+    
+    [self.tableView reloadData];
+
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
+# pragma mark - UISearchBarDelegate PROTOCOL IMPLEMENTATION
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    
+    /* Filter the recents recent's list when search string changes */
+    [self.searchesManager filterResultsUsingString:searchText];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+}
+
+# pragma mark - IMPLEMENTING UITableViewDataSource & UITableViewDelegate
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MPExampleCell"];
+    
+    if (!cell) {
+        cell = [UITableViewCell new];
+    }
+    
+    
+    [cell.textLabel setText:[self.dataArray objectAtIndex:indexPath.row]];
+    return cell;
+}
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.dataArray count];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [self.searchBar resignFirstResponder];
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
+
+
 
 @end
